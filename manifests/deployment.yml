@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: chawlasuhanipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chawlasuhanipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: chawlasuhanipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: chawlasuhanipipelinesjavascriptdocker 
+          image: suhanicontainerregistry.azurecr.io/chawlasuhanipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
